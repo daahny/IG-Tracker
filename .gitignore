@@ -1,0 +1,4 @@
+IG-Tracker/templates/args.json
+IG-Tracker/users/*
+!IG-Tracker/users/sample
+IG-Tracker/__pycache__/*
