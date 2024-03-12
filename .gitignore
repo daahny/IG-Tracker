@@ -1,3 +1,4 @@
 users/*
 !users/bob
+!users/mary
 __pycache__/*
