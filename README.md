@@ -13,13 +13,29 @@ This repo contains a set of scripts that use python's `instaloader` module to lo
 
 ## Setup
 
-1. Rename `templates/sample_args.json` to `templates/args.json`
-2. Configure `templates/args.json` with your instagram bot settings and your email bot settings
-3. Run `tools/adduser.py` to create a user directory in `users/` and files with required user data
+1. Create `bot/` directory in `users/`
+2. Add SMTP and IG credentials/arguments to `smtp.json` and `ig.json` respectively in `users/bot`
+   - Use templates in `templates/smtp.json` and `templates/ig.json`
+3. Run `tools/adduser.py` to create a user directory in `users/` with necessary user data
+
+
+### Directory Structure
+```
+users/
+├─ bot/
+│  ├─ smtp.json
+│  ├─ ig.json
+├─ mary/
+│  ├─ mary_followers.txt
+│  ├─ mary_args.json
+├─ bob/
+│  ├─ bob_followers.txt
+│  ├─ bob_args.json
+```
 
 ## Usage
 
-- The first time you run `ig-tracker.py`, a file will be created in the `users/<user>/` directory with a list of current followers
+- The first time you run `igtracker.py`, a file will be created in the `users/<user>/` directory with a list of current followers
 - Subsequent runs will extract followers from your Instagram and compare this set of followers to followers in the `users/<user>/<user>_followers.txt` file
 
-Run using `python3 ig-tracker.py -u|--users [ users ... ]`
+Run using `python3 igtracker.py -u | --users [ users ... ]`
