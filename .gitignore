@@ -1,4 +1,3 @@
-templates/args.json
 users/*
-!users/sample
+!users/bob
 __pycache__/*
